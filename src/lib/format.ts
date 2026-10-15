@@ -1,0 +1,5 @@
+export const rp = (n: number) => 'Rp ' + Math.round(n).toLocaleString('id-ID')
+export const fmtTime = (ts: string | number) => new Date(ts).toLocaleString('id-ID', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })
+export const fmtDate = (d: string | number) => new Date(d).toLocaleDateString('id-ID', { day: '2-digit', month: 'short', year: 'numeric' })
+export const pct = (a: number, b: number) => (b ? Math.round((a / b) * 100) + '%' : '—')
+export const sum = <T>(arr: T[], k: keyof T) => arr.reduce((a, x) => a + (Number(x[k]) || 0), 0)
